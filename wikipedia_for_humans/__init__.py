@@ -325,7 +325,7 @@ def summary(query, lang="en"):
     if isinstance(query, wikipediaapi.WikipediaPage):
         page = query
     else:
-        results = search_wikipedia(query, limit=1)
+        results = search_wikipedia(query, limit=3)
         if results is None:
             return ""
         page = _get_page(results["pages"][0], lang, auto_disambiguate=True)
